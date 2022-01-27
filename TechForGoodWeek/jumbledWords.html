@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="TFGW_Logo.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <title>Jumbled Words</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top"> <!-- py: padding in the y axis -->
+        <div class="container">
+            <a href="#" class="navbar-brand">Track & Crack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav item">
+                        <a href="index.html" class="nav-link">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="bg-warning text-light mb-2 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between"> <!-- d-flex: Flex on all sizes / d-sm-flex : Flex until it hits sm break point -->
+                <div class="text-dark">
+                    <h1>Play and Learn - <span class="text-secondary">Jumbled Words</span></h1>
+                    <p class="lead text-secondary my-4"> <span class="text-dark">Learning by games has benefits like :</span> <br> Increases A Child's Memory Capacity. <br> Skill-Building. <br> Computer & Simulation Fluency. <br> Helps With Fast Strategic Thinking & Problem-Solving. <br> Develops Hand-Eye Coordination. </p>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="undraw_domain_names_re_0uun.svg" alt=""> <!-- w- : width/2 or 50% |  -->
+            </div>
+        </div>
+    </section>
+
+     <!-- Jumbled Words -->
+     <section>
+         <div class="container bg-warning mt-3 mb-3">
+            <div class="row align-items-center justify-content-betweeen">
+                <div class="col-md p-5">
+                    <img src="undraw_knowledge_re_leit.svg" class="img-fluid w-50" alt="">
+                </div>
+                <div class="col-md p-5">
+                    <div class="h2 mb-4" style="margin-left: 115px;">Jumbled Words</div>
+                    <div class="gameArea">
+                        <h3 class="msg"></h3>
+                        <input class="jumbledInput invisible px-3 mb-2" type="text" placeholder="Type the correct word here" style="border-radius: 20px;"> <br>
+                        <button class="btn btn-secondary" style="margin-left: 145px; width: 30%;">Click here to Start</button>
+                    </div>
+                </div>
+            </div>      
+         </div>
+     </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">
+                Copyright @ Tech for Good Week 2022
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const msg = document.querySelector('.msg');
+        const guess = document.querySelector('input');
+        const btn = document.querySelector('.btn');
+        let play = false;
+        let newWords = "";
+        let randWords = "";
+        let sWords = ['questions', 'mentor', 'alphabet', 'arithmetic', 'adjectives', 'adverbs', 'consonants', 'education', 'english', 'jumbled', 'sentence', 'verb', 'learn', 'pronoun', 'vowels'];
+
+        const createNewWords = () =>{
+            let ranNum = Math.floor(Math.random() * sWords.length);
+            //console.log(ranNum);
+            let newTempsWords = sWords[ranNum];
+            //console.log(newTempsWords.split(""));
+            return newTempsWords;
+        }
+        const scrambleWords = (arr) => {
+            for (let i = arr.length-1; i>0; i--) {
+                let temp = arr[i];
+                //console.log(temp);
+                let j = Math.floor(Math.random()*(i+1));
+                //console.log(i);
+                //console.log(j);
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+            return arr;
+        }
+
+        btn.addEventListener('click', function(){
+            if(!play) {
+                play = true;
+                btn.innerHTML = "Guess";
+                guess.classList.toggle('invisible');
+                newWords = createNewWords();
+                randWords = scrambleWords(newWords.split("")).join("");
+                //console.log(randWords.join("")); 
+                msg.innerHTML = `Guess the word : ${randWords}`;
+            } else {
+                let tempWord = guess.value;
+                if(tempWord === newWords) {
+                    console.log('Correct');
+                    play = false;
+                    msg.innerHTML = `Awesome it's correct! It's ${newWords}.`;
+                    btn.innerHTML = `Start again`;
+                    guess.classList.toggle('invisible');
+                    guess.value = "";
+                } else {
+                    console.log('Incorrect');
+                    msg.innerHTML = `Sorry! It's incorrect! Pls try again : ${randWords}`;
+                }
+            }
+        })
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

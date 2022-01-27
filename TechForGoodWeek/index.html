@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="TFGW_Logo.png" type="image/icon type">
+    <link rel="stylesheet" href="style.css">
+    <title>Tech for Good Week</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top"> <!-- py: padding in the y axis -->
+        <div class="container">
+            <a href="#" class="navbar-brand">Track & Crack</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav item">
+                        <a href="#learn" class="nav-link">How You'll Learn</a>
+                    </li>
+                    <li class="nav item">
+                        <a href="#questions" class="nav-link">Questions</a>
+                    </li>
+                    <li class="nav item">
+                        <a href="#team" class="nav-link">Team</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section class="bg-warning text-light mb-2 p-lg-0 pt-lg-5 text-center text-sm-start">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between"> <!-- d-flex: Flex on all sizes / d-sm-flex : Flex until it hits sm break point -->
+                <div class="text-dark">
+                    <h1>Become a <span style="color: #6c63ff;">PRO</span> in English</h1>
+                    <p class="lead my-4">We focus on teaching our students the fundamentals of the basic English like the meaning and the pronounciation of it.</p>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="undraw_knowledge_re_leit.svg" alt=""> <!-- w- : width/2 or 50% |  -->
+            </div>
+        </div>
+    </section>
+
+     <!-- Actual Part -->
+     <section>
+        <h2 class="px-5 p-4">Learn New Words and it's Pronunciation in English :</h2>
+        <audio id="sound"></audio>
+         <div class="container actual">
+            <div class="search-box">
+                <input type="text" placeholder="Type the word here.." id="inp-word"/>
+                <button class="btn btn-dark mx-2" id="search-btn">Search</button>
+            </div>
+            <div class="result" id="result"></div>
+         </div>
+     </section>
+
+     <br>
+
+    <!-- Learn Sections -->
+    <div id="learn" class="bg-warning p-5 my-3">
+        <div class="row align-items-center justify-content-betweeen">
+            <div class="col-md p-5">
+                <img src="undraw_chat_bot_re_e2gj.svg" class="img-fluid" alt="">
+            </div>
+            <div class="col-md p-5">
+                <h2>Learn With ChatBot - Studento</h2>
+                <p class="lead">
+                    It is student educational chatbot developed in the view of making learning easy by answering questions to your children.
+                </p>
+                <a href="https://t.me/Student_ebot" target="_blank" class="btn btn-light mt-3">
+                    <i class="bi bi-chevron-right"></i>
+                    Learn with ChatBot
+                </a>
+            </div>
+        </div>           
+    </div>
+
+    <!-- Games -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md"> <!-- col-md : For small screens we want columns to stack-->
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-arrow-repeat"></i> 
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Jumbled Words
+                            </h3>
+                            <a href="jumbledWords.html" target="_blank" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div> 
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-geo"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Hangman
+                            </h3>
+                            <a href="https://hangman-tfgw.netlify.app/" target="_blank" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-patch-question-fill"></i> 
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Quiz
+                            </h3>
+                            <a href="quiz.html" target="_blank" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-lightbulb-fill"></i> 
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Memory Game
+                            </h3>
+                            <a href="memory.html" target="_blank" class="btn btn-dark">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-brush-fill"></i> 
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Paint
+                            </h3>
+                            <a href="paint.html" target="_blank" class="btn btn-warning">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+        <div class="container">
+            <h2 class="text-center mb-4">
+                Frequently Asked Questions
+            </h2>
+            <div class="accordion accordion-flush" id="questions">
+                <!-- FAQ 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questions-one">
+                        What is our extension about ?
+                    </button>
+                  </h2>
+                  <div id="questions-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        With the help of our extension you can search for any word's meaning, pronunciation in English and your regional language. 
+                    </div>
+                  </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questions-two">
+                        How it will be useful for students?
+                    </button>
+                  </h2>
+                  <div id="questions-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        It can help students learn new words along with the correct way of pronouncing them. Regional language option will help them remember the words better.
+                    </div>
+                  </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#questions-three">
+                        How to use our extension?
+                    </button>
+                  </h2>
+                  <div id="questions-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+                    <div class="accordion-body">
+                        Add our extension as a plugin from google extension bar and use it whenever needed.
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="p-5 bg-warning">
+        <div class="container">
+            <h2 class="text-center mb-4">
+                Our Team
+            </h2>
+            <p class="lead text-center mb-2">
+                Our team is driven by a dream, <br> A dream to make a difference, <br> A dream to improve society on a whole.
+            </p>
+            <div class="text-center mb-3">
+                <h3>#We Believe #We Become #We Inspire</h3>
+                <h2><span class="text-secondary">We are</span> ENACTUS REC</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3"> <!-- col-md-6 : Half or 2 columns / col-lg-3 : Quarter or 4 columns | In grid there are usually 12 columns so to have 2 col in md we use col-md-6 and similarly for 4 columns we use col-lg-3 -->
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="Anjana_TechForGoodWeek.jpeg" class="rounded-circle w-50 mb-3" alt="">
+                            <h3 class="card-title mb-3">
+                                Anjana S
+                            </h3>
+                            <a href="https://www.linkedin.com/in/anjana-s-2002/" target="_blank"><i class="bi bi-linkedin text-primary mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3"> <!-- col-md-6 : Half or 2 columns / col-lg-3 : Quarter or 4 columns | In grid there are usually 12 columns so to have 2 col in md we use col-md-6 and similarly for 4 columns we use col-lg-3 -->
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="Lokesh_TechForGoodWeek.jpeg" class="rounded-circle w-50 mb-3" alt="">
+                            <h3 class="card-title mb-3">
+                                Lokesh Kumar G
+                            </h3>
+                            <a href="https://www.linkedin.com/in/lokeshkumar21" target="_blank"><i class="bi bi-linkedin text-primary mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3"> <!-- col-md-6 : Half or 2 columns / col-lg-3 : Quarter or 4 columns | In grid there are usually 12 columns so to have 2 col in md we use col-md-6 and similarly for 4 columns we use col-lg-3 -->
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="Suraj_TechForGoodWeek.jpeg" class="rounded-circle w-50 mb-3" alt="">
+                            <h3 class="card-title mb-3">
+                                Suraj N
+                            </h3>
+                            <a href="https://www.linkedin.com/in/suraj-n-45b3a31a9/" target="_blank"><i class="bi bi-linkedin text-primary mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3"> <!-- col-md-6 : Half or 2 columns / col-lg-3 : Quarter or 4 columns | In grid there are usually 12 columns so to have 2 col in md we use col-md-6 and similarly for 4 columns we use col-lg-3 -->
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="Varsha_TechForGoodWeek.jpeg" class="rounded-circle w-50 mb-3" alt="">
+                            <h3 class="card-title mb-3">
+                                Varsha P
+                            </h3>
+                            <a href="https://www.linkedin.com/in/varsha-p-4641171b5" target="_blank"><i class="bi bi-linkedin text-primary mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+        <div class="container">
+            <p class="lead">
+                Copyright @ Tech for Good Week 2022
+            </p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5">
+                <i class="bi bi-arrow-up-circle text-warning h1"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
