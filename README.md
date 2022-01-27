@@ -24,10 +24,11 @@ Young Kids of the demographic 8-12
   <li> CSS </li>
   <li> JS </li>
   <li> Vue js </li>
+  <li> Bootstrap </li>
 </ul>
 
 ## Our App and It's features - https://win-et-enactusrec-tfgw.netlify.app/
-- Pronounciation
+- Meanings and Pronounciation with sound
 - Hangman
 - Quiz
 - Jumbled Words
