@@ -28,7 +28,7 @@ Young Kids of the demographic 8-12
 </ul>
 
 ## Our App and It's features - https://win-et-enactusrec-tfgw.netlify.app/
-- Meanings and Pronounciation with sound
+- Meanings and Pronunciation with sound
 - Hangman
 - Quiz
 - Jumbled Words
