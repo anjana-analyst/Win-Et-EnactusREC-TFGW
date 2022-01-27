@@ -1,0 +1,14 @@
+.App-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: .1;
+  font-size: 0.9em;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.App-footer > h5 {
+  margin-left: 8px;
+}

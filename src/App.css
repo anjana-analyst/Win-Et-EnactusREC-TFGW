@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.App a {
+  text-decoration: none;
+  color: #ff6600;
+}
+
+.App a:hover {
+  text-decoration: none;
+}
