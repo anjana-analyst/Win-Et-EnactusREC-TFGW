@@ -29,7 +29,7 @@ Young Kids of the demographic 8-12
 
 ## Our App and It's features - https://win-et-enactusrec-tfgw.netlify.app/
 - Meanings and Pronunciation with sound
-- Hangman
+- Hangman (refer master branch for code)
 - Quiz
 - Jumbled Words
 - Memory Game
@@ -38,4 +38,4 @@ Young Kids of the demographic 8-12
 ## Downloading Instructions
 - Clone the repository or download it
 - Access the main index.html file to view the app
-- For react use npm start and it will be running on localhost server
+- For react hangman app , go to master branch download the code and use npm install and start and it will be running on localhost server
